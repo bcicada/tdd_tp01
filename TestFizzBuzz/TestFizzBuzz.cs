@@ -9,10 +9,10 @@ namespace TestFizzBuzz
         public void Generate_ReturnsCorrectString(int n, string expected)
         {
             // Arrange
-            var generator = new FizzBuzz.FizzBuzz();
+            var fizzBuzz = new FizzBuzz.FizzBuzz();
 
             // Act
-            string actual = generator.Generate(n);
+            string actual = fizzBuzz.Generate(n);
 
             // Assert
             Assert.Equal(expected, actual);
