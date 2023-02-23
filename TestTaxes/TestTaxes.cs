@@ -17,5 +17,19 @@ namespace TestTaxes
             // Assert
             Assert.Equal($"{taxes.CalculateTaxesRate()}% - {taxes.CalculateTaxesAmount()}", actual);
         }
+
+        [Fact]
+        public void CalculateTaxesRate_ReturnsCorrectRate()
+        {
+            // Arrange
+            var taxes = new Taxes.Taxes();
+
+            // Act
+            taxes.SetAnnualIncome(10776);
+            decimal actual = 0;
+
+            // Assert
+            Assert.Equal(taxes.CalculateTaxesRate(), actual);
+        }
     }
 }
