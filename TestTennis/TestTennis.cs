@@ -6,17 +6,15 @@ namespace TestTennis
         public void GetScore_ReturnsCorrectScore()
         {
             // Arrange
-            string playerOne = "Roger Federer";
-            string playerTwo = "Rafael Nadal";
             var tennis = new Tennis.Tennis();
 
             // Act
-            tennis.MarkPoint(playerOne);
-            tennis.MarkPoint(playerOne);
-            tennis.MarkPoint(playerOne);
+            tennis.PlayerOneMarkPoint();
+            tennis.PlayerOneMarkPoint();
+            tennis.PlayerOneMarkPoint();
 
-            tennis.MarkPoint(playerTwo);
-            tennis.MarkPoint(playerTwo);
+            tennis.PlayerTwoMarkPoint();
+            tennis.PlayerTwoMarkPoint();
 
             var actual = "40 - 30";
 
