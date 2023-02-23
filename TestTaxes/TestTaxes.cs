@@ -11,12 +11,11 @@ namespace TestTaxes
             var taxes = new Taxes.Taxes();
 
             // Act
-            taxes.SetAnnualIncome(27478);
-
-            var actual = 111;
+            taxes.SetAnnualIncome(10776);
+            string actual = "0% - 0";
 
             // Assert
-            Assert.Equal(taxes.CalculateTaxesAmount(), actual);
+            Assert.Equal($"{taxes.CalculateTaxesRate()}% - {taxes.CalculateTaxesAmount()}", actual);
         }
     }
 }
