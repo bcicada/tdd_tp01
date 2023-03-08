@@ -10,9 +10,9 @@ namespace CreditImmobilier.Loan.LoanCost
     {
         private readonly LoanAmount _loanAmount;
         private readonly LoanTermInMonths _loanTermInMonths;
-        private double _loanInterest;
+        private readonly LoanInterest _loanInterest;
 
-        public LoanCost() 
+        public LoanCost(LoanAmount loanAmount, LoanTermInMonths loanTermInMonths, LoanInterest loanInterest) 
         {
 
         }
