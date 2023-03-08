@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CreditImmobilier
+namespace CreditImmobilier.Loan
 {
     public class LoanTermInMonths
     {
         private int _loanTermInMonths { get; }
 
-        public LoanTermInMonths(int loanTermInMonths) 
+        public LoanTermInMonths(int loanTermInMonths)
         {
             if (loanTermInMonths < 108)
                 throw new ArgumentOutOfRangeException(nameof(loanTermInMonths), "The number of monthly payments must be greater than 108 months.");

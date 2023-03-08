@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CreditImmobilier.Loan;
 
-namespace CreditImmobilier.LoanInsurance.LoanInsurance
+namespace CreditImmobilier.LoanInsurance
 {
     public class LoanInsurance : ILoanInsurance
     {

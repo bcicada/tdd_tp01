@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CreditImmobilier.LoanInsurance.LoanInsurance
+namespace CreditImmobilier.LoanInsurance
 {
     public interface ILoanInsurance
     {
