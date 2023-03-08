@@ -31,12 +31,12 @@ namespace CreditImmobilier
 
         public double CalculateMonthlyLoanInsuranceCost()
         {
-            return 0;
+            return Math.Round((_loanAmount * _loanInsuranceInterest / 100 / 12),2);
         }
 
         public double CalculateTotalLoanInsuranceCost()
         {
-            return 0;
+            return Math.Round(CalculateMonthlyLoanInsuranceCost() * _loanTermInMonths, 2);
         }
     }
 }
