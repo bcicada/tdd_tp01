@@ -8,15 +8,23 @@ namespace CreditImmobilier.Loan.LoanCost
 {
     public class LoanCost : ILoanCost
     {
-    }
+        private readonly LoanAmount _loanAmount;
+        private readonly LoanTermInMonths _loanTermInMonths;
+        private double _loanInterest;
 
-    public double CalculateMonthlyLoanCost()
-    {
+        public LoanCost() 
+        {
 
-    }
+        }
 
-    public double CalculateTotalLoanCost()
-    {
+        public double CalculateMonthlyLoanCost()
+        {
 
+        }
+
+        public double CalculateTotalLoanCost()
+        {
+
+        }
     }
 }
