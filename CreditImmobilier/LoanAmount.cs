@@ -14,5 +14,10 @@ namespace CreditImmobilier
         {
             _amount = amount < 50000 ? throw new ArgumentOutOfRangeException(nameof(amount), "The amount borrowed must be greater than 50000.") : amount;
         }
+
+        public static explicit operator double(LoanAmount v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CreditImmobilier
+namespace CreditImmobilier.LoanInsurance.LoanInsurance
 {
     public class LoanInsurance : ILoanInsurance
     {
@@ -12,7 +12,7 @@ namespace CreditImmobilier
         private readonly LoanTermInMonths _loanTermInMonths;
         private double _loanInsuranceInterest;
 
-        public LoanInsurance(LoanAmount loanAmount, LoanTermInMonths loanTermInMonths, bool isSporty, bool isSmoker, bool asHeartCondition, bool isComputerEngineer, bool isFighterPilot) 
+        public LoanInsurance(LoanAmount loanAmount, LoanTermInMonths loanTermInMonths, bool isSporty, bool isSmoker, bool asHeartCondition, bool isComputerEngineer, bool isFighterPilot)
         {
             _loanAmount = loanAmount;
             _loanTermInMonths = loanTermInMonths;
@@ -31,12 +31,12 @@ namespace CreditImmobilier
 
         public double CalculateMonthlyLoanInsuranceCost()
         {
-            return Math.Round((_loanAmount * _loanInsuranceInterest / 100 / 12),2);
+            return Math.Round((double) _loanAmount * _loanInsuranceInterest / 100 / 12, 2);
         }
 
         public double CalculateTotalLoanInsuranceCost()
         {
-            return Math.Round(CalculateMonthlyLoanInsuranceCost() * _loanTermInMonths, 2);
+            return Math.Round(CalculateMonthlyLoanInsuranceCost() * (double) _loanTermInMonths, 2);
         }
     }
 }

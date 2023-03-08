@@ -19,5 +19,10 @@ namespace CreditImmobilier
 
             _loanTermInMonths = loanTermInMonths;
         }
+
+        public static explicit operator double(LoanTermInMonths v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
