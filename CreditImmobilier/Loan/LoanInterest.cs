@@ -10,10 +10,13 @@ namespace CreditImmobilier.Loan
     {
         private double _interest { get; }
 
-        public LoanInterest(double interest) 
+        public LoanInterest(double interest)
         {
             _interest = interest;
         }
+
+        public double GetInterest()
+        { return _interest; }
 
         public static explicit operator double(LoanInterest v)
         {

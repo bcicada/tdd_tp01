@@ -10,5 +10,6 @@ namespace CreditImmobilier.Loan.LoanCost
     {
         double CalculateMonthlyLoanCost();
         double CalculateTotalLoanCost();
+        double CalculateMonthlyLoanCostWithoutInterest(int months);
     }
 }
