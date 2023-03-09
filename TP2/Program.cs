@@ -44,7 +44,7 @@ namespace TP2.ConsoleApp
             Console.WriteLine("\n");
             Console.WriteLine("*** Assurance ***");
             Console.WriteLine($"Coût mensuel           : { loanInsurance.CalculateMonthlyLoanInsuranceCost() }");
-            Console.WriteLine($"Coût annuel            : { loanInsurance.CalculateTotalLoanInsuranceCost() }");
+            Console.WriteLine($"Coût total            : { loanInsurance.CalculateTotalLoanInsuranceCost() }");
             Console.WriteLine("\n");
             Console.WriteLine("*** Emprunt ***");
             Console.WriteLine($"Coût mensuel           : { loanCost.CalculateMonthlyLoanCost() }");
