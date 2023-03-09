@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CreditImmobilier.Calculator
+namespace TP2.RealEstateLoan.Calculator
 {
     public interface ICalculator
     {

@@ -1,13 +1,12 @@
-﻿using CreditImmobilier.Loan;
-using CreditImmobilier.Loan.LoanCost;
-using CreditImmobilier.Loan.LoanInsurance;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TP2.RealEstateLoan.Loan.LoanCost;
+using TP2.RealEstateLoan.Loan.LoanInsurance;
 
-namespace CreditImmobilier.Calculator
+namespace TP2.RealEstateLoan.Calculator
 {
     public class Calculator : ICalculator
     {

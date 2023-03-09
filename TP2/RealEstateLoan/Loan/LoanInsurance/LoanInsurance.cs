@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CreditImmobilier.Loan;
 
-namespace CreditImmobilier.Loan.LoanInsurance
+namespace TP2.RealEstateLoan.Loan.LoanInsurance
 {
     public class LoanInsurance : ILoanInsurance
     {
@@ -32,12 +31,12 @@ namespace CreditImmobilier.Loan.LoanInsurance
 
         public double CalculateMonthlyLoanInsuranceCost()
         {
-            return Math.Round((double) _loanAmount * LoanInsuranceInterest / 12, 2);
+            return Math.Round((double)_loanAmount * LoanInsuranceInterest / 12, 2);
         }
 
         public double CalculateTotalLoanInsuranceCost()
         {
-            return Math.Round(CalculateMonthlyLoanInsuranceCost() * (double) _loanTermInMonths, 2);
+            return Math.Round(CalculateMonthlyLoanInsuranceCost() * (double)_loanTermInMonths, 2);
         }
     }
 }

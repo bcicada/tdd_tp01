@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CreditImmobilier.Loan
+namespace TP2.RealEstateLoan.Loan
 {
     public class LoanTermInMonths
     {
