@@ -20,9 +20,14 @@ namespace TP2.RealEstateLoan.Loan
             _loanTermInMonths = loanTermInMonths;
         }
 
-        public static explicit operator double(LoanTermInMonths v)
+        public static explicit operator double(LoanTermInMonths loanTermInMonths)
         {
-            throw new NotImplementedException();
+            return loanTermInMonths._loanTermInMonths;
+        }
+
+        public static implicit operator LoanTermInMonths(int loanTermInMonths)
+        {
+            return new LoanTermInMonths(loanTermInMonths);
         }
     }
 }

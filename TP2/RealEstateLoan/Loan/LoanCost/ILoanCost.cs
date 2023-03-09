@@ -9,7 +9,8 @@ namespace TP2.RealEstateLoan.Loan.LoanCost
     public interface ILoanCost
     {
         double CalculateMonthlyLoanCost();
-        double CalculateTotalLoanCost();
         double CalculateMonthlyLoanCostWithoutInterest(int months);
+        double CalculateTotalLoanCost();
+        double CalculateTotalLoanInterestCost();
     }
 }

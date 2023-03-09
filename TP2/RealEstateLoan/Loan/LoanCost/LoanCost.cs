@@ -18,23 +18,27 @@ namespace TP2.RealEstateLoan.Loan.LoanCost
             _loanAmount = loanAmount;
             _loanTermInMonths = loanTermInMonths;
             _loanInterest = loanInterest;
-            _monthlyLoanInterest = (double)_loanInterest / 12;
+            _monthlyLoanInterest = (double) _loanInterest / 12;
         }
 
         public double CalculateMonthlyLoanCost()
         {
-            return Math.Round((double)_loanAmount * _monthlyLoanInterest / (1 - Math.Pow(1 + _monthlyLoanInterest, -(double)_loanTermInMonths)), 2);
+            return Math.Round((double)_loanAmount * _monthlyLoanInterest / (1 - Math.Pow(1 + _monthlyLoanInterest, -(double) _loanTermInMonths)), 2);
         }
 
         public double CalculateMonthlyLoanCostWithoutInterest(int months)
         {
-            return Math.Round(CalculateMonthlyLoanCost() * (1 - Math.Pow(1 + _monthlyLoanInterest, months)) / _monthlyLoanInterest, 2);
-
+            return Math.Round((double)_loanAmount * ((Math.Pow(1+_monthlyLoanInterest, months) -1) / (Math.Pow(1+_monthlyLoanInterest,(double) _loanTermInMonths) -1)), 2);
         }
 
         public double CalculateTotalLoanCost()
         {
-            return Math.Round(CalculateMonthlyLoanCost() * (double)_loanTermInMonths, 2);
+            return Math.Round(CalculateMonthlyLoanCost() * (double) _loanTermInMonths, 2);
+        }
+
+        public double CalculateTotalLoanInterestCost()
+        {
+            return Math.Round(CalculateTotalLoanCost() - (double) _loanAmount, 2);
         }
     }
 }

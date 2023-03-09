@@ -15,9 +15,14 @@ namespace TP2.RealEstateLoan.Loan
             _amount = amount < 50000 ? throw new ArgumentOutOfRangeException(nameof(amount), "The amount borrowed must be greater than 50000.") : amount;
         }
 
-        public static explicit operator double(LoanAmount v)
+        public static explicit operator double(LoanAmount loanAmount)
         {
-            throw new NotImplementedException();
+            return loanAmount._amount;
+        }
+
+        public static explicit operator LoanAmount(double amount)
+        {
+            return new LoanAmount(amount);
         }
     }
 }

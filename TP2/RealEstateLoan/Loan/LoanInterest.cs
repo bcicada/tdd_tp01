@@ -12,15 +12,17 @@ namespace TP2.RealEstateLoan.Loan
 
         public LoanInterest(double interest)
         {
-            _interest = interest;
+            _interest = interest / 100;
         }
 
-        public double GetInterest()
-        { return _interest; }
-
-        public static explicit operator double(LoanInterest v)
+        public static explicit operator double(LoanInterest loanInterest)
         {
-            throw new NotImplementedException();
+            return loanInterest._interest;
+        }
+
+        public static implicit operator LoanInterest(double interest)
+        {
+            return new LoanInterest(interest);
         }
     }
 }

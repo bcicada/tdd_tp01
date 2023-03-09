@@ -12,19 +12,19 @@ namespace TP2.RealEstateLoan.Loan.LoanInsurance
         private readonly LoanTermInMonths _loanTermInMonths;
         private double LoanInsuranceInterest;
 
-        public LoanInsurance(LoanAmount loanAmount, LoanTermInMonths loanTermInMonths, bool isSporty, bool isSmoker, bool asHeartCondition, bool isComputerEngineer, bool isFighterPilot)
+        public LoanInsurance(LoanAmount loanAmount, LoanTermInMonths loanTermInMonths, bool isSporty, bool isSmoker, bool hasHeartCondition, bool isComputerEngineer, bool isFighterPilot)
         {
             _loanAmount = loanAmount;
             _loanTermInMonths = loanTermInMonths;
             LoanInsuranceInterest = 0.003;
-            CalculateLoanInsuranceInterest(isSporty, isSmoker, asHeartCondition, isComputerEngineer, isFighterPilot);
+            CalculateLoanInsuranceInterest(isSporty, isSmoker, hasHeartCondition, isComputerEngineer, isFighterPilot);
         }
 
-        private void CalculateLoanInsuranceInterest(bool isSporty, bool isSmoker, bool asHeartCondition, bool isComputerEngineer, bool isFighterPilot)
+        private void CalculateLoanInsuranceInterest(bool isSporty, bool isSmoker, bool hasHeartCondition, bool isComputerEngineer, bool isFighterPilot)
         {
             if (isSporty) LoanInsuranceInterest -= 0.0005;
             if (isSmoker) LoanInsuranceInterest += 0.0015;
-            if (asHeartCondition) LoanInsuranceInterest += 0.003;
+            if (hasHeartCondition) LoanInsuranceInterest += 0.003;
             if (isComputerEngineer) LoanInsuranceInterest -= 0.0005;
             if (isFighterPilot) LoanInsuranceInterest += 0.0015;
         }
